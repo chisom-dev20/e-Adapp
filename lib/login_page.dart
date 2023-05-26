@@ -27,8 +27,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
 
-  final height = MediaQuery.of(context).size.height;
-
   final width = MediaQuery.of(context).size.width;
 
 
@@ -55,10 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               
-              //Flexible(child: SizedBox(height: height*0.1,),),
-
               SizedBox(height: 80,),
-
               
               Row(
                 children: [
@@ -74,8 +69,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               
               
-              //Flexible(child: SizedBox(height: height*0.15,)),
-      
               SizedBox(height: 110,),
       
       
