@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
       
-              SizedBox(height: 15,),
+              SizedBox(height: 12,),
               
               SizedBox(
                 height: 50,
@@ -123,20 +123,25 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               children: [
                 SizedBox(
-                  width: 30,
+                  width: 25,
                   height: 10,
-                  child: Checkbox(
-                    side: BorderSide(width: 1, color: Color(0xFF22A45D)),
-                    activeColor: Color(0xFF22A45D),
-                    value: rememberMe, 
-                    onChanged: (value){
-                      setState(() {
-                        rememberMe = value!;
-                      });
-                    }),
+                  child: Transform.scale(
+                    scale: 0.65,
+                    child: Checkbox(
+                      side: BorderSide(width: 2.7, color: Color(0xFF22A45D)),
+                      activeColor: Color(0xFF22A45D),
+                      value: rememberMe, 
+                      onChanged: (value){
+                        setState(() {
+                          rememberMe = value!;
+                        });
+                      }),
+                  ),
                 ),
+
+                SizedBox(width: 3,),
       
-                Text('Remember me', style: GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w500, color: Color(0xFF666666).withOpacity(0.6)),)
+                Text('Remember me', style: GoogleFonts.poppins(fontSize: 11, fontWeight: FontWeight.w600, color: Color(0xFF666666).withOpacity(0.5)),)
               ],
             ),
       
@@ -144,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
               onTap: (){
                 customNavigation(context, EmptyScreen(page: 'Forgot Password'));
               },
-              child: Text('Forgot Password ?', style: GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w500, color: Color(0xFF22A45D)),)
+              child: Text('Forgot Password ?', style: GoogleFonts.poppins(fontSize: 11, fontWeight: FontWeight.w500, color: Color(0xFF22A45D)),)
             )
            ],
           ),
@@ -231,8 +236,8 @@ class _LoginPageState extends State<LoginPage> {
     InputDecoration textFieldDeco(String hint) => InputDecoration(
       hintText: hint,
       hintStyle: GoogleFonts.poppins(fontSize: 12, color: Colors.grey.shade500),
-      border: OutlineInputBorder(borderRadius: BorderRadius.circular(7), borderSide: BorderSide(color: Colors.black.withOpacity(0.6))),
-      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(7), borderSide: BorderSide(color: Colors.black.withOpacity(0.6))),
-      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(7), borderSide: BorderSide(width: 1.0, color: Color(0xFF22A45D)),),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(color: Colors.black.withOpacity(0.6))),
+      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(color: Colors.black.withOpacity(0.6))),
+      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(width: 1.0, color: Color(0xFF22A45D)),),
   );
 }
